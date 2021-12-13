@@ -23,8 +23,6 @@ class TTT:
         win = None
 
         n = len(self.board)
-
-        # checking rows
         for i in range(n):
             win = True
             for j in range(n):
@@ -96,15 +94,11 @@ class TTT:
                 print(f"Player {player} wins")
                 break
 
-            # checking whether the game is draw or not
             if self.is_board_filled():
                 print("TIE!")
                 break
 
-            # swapping the turn
             player = self.swap_player_turn(player)
-
-        # showing the final view of board
         print()
         self.show_board()
 tic_tac_toe = TTT()
